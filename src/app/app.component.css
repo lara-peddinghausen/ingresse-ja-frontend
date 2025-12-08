@@ -1,0 +1,9 @@
+p {
+    color: red;
+    font-weight: bold;
+}
+
+.corFundo {
+    background-color: yellow;
+    width: fit-content;
+}

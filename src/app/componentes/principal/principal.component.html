@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <span><a routerLink="/home" class="text-decoration-none text-reset">Ingresse Já</a></span>
+    <span class="example-spacer"></span>
+    <button *ngIf="logado" mat-button routerLink="/home">Home</button> <!-- *ngIf="logado" se estiver logado aparece Home e Sair. uma linha dessa para cada menu -->
+    <button *ngIf="logado" mat-button routerLink="/cadastro/evento">Cradastrar evento</button>
+    <button *ngIf="logado" mat-button (click)="sair()">Sair</button>
+</mat-toolbar>
+  
+<!-- Conteúdo interno da página -->
+<div class="content">
+  <!-- O conteúdo das rotas será exibido aqui -->
+  <router-outlet></router-outlet>
+</div>
+  
+<!-- Rodapé -->
+<div class="footer">
+    <span>&copy; 2025 Ingresse Já</span>
+</div>

@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="card" style="width: 400px;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4">Cadastro de evento</h3>
+
+      <form [formGroup]="eventoForm" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+          <label for="eventoForm" class="form-label">Nome do evento:</label>
+          <input id="eventoForm" class="form-control" formControlName="nomeEvento" type="text" autofocus />
+          <div *ngIf="eventoForm.get('nomeEvento')?.invalid && eventoForm.get('nomeEvento')?.touched">
+            <small *ngIf="eventoForm.get('nomeEvento')?.hasError('required')">Nome do evento é obrigatório.</small>
+          </div>
+        </div>
+
+        <div class="d-grid gap-3">
+          <button type="submit" class="btn btn-primary" [disabled]="eventoForm.invalid">Cadastrar</button>
+          <a class="btn btn-primary" routerLink="/home">Cancelar</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

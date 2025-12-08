@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  mat-toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Garante que o navbar fique acima de outros elementos */
+  }
+  
+  .content {
+    padding-top: 64px; /* Para que o conteúdo não sobreponha o navbar fixo */
+    min-height: calc(100vh - 100px); /* Ocupa o restante da tela (tirando o navbar e rodapé) */
+    padding-bottom: 40px; /* Espaçamento extra para o rodapé */
+  }
+  
+ .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
