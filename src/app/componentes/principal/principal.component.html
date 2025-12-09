@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <span><a routerLink="/home" class="text-decoration-none text-reset">Ingresse Já</a></span>
+    
+    <span class="example-spacer"></span>
+    
+    <ng-container *ngIf="logado">
+        
+        <button mat-button routerLink="/home">Home</button>
+        <button mat-button routerLink="/cadastro/evento">Cadastrar evento</button>
+        
+        <button mat-button routerLink="/cadastro/cupom">Criar Cupom</button>
+        <button mat-button routerLink="/cadastro/ingresso">Criar Ingresso</button>
+
+        <button mat-button (click)="sair()">Sair</button>
+    </ng-container>
+
+</mat-toolbar>
+ 
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+ 
+<div class="footer">
+    <span>&copy; 2025 Ingresse Já</span>
+</div>

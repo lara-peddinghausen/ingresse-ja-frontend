@@ -1,0 +1,51 @@
+<div class="cupom-cadastro-container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Cadastro de Novo Cupom</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <form [formGroup]="cupomForm" (ngSubmit)="onSubmit()">
+                
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Nome do Cupom</mat-label>
+                    <input matInput formControlName="cupomNome" placeholder="Ex: DESCONTO-FERIAS">
+                    <mat-error *ngIf="cupomForm.get('cupomNome')?.hasError('required')">
+                        O nome do cupom é obrigatório.
+                    </mat-error>
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>Valor de Desconto (%)</mat-label>
+                    <input matInput formControlName="valorDesconto" type="number" placeholder="Ex: 15">
+                    <mat-error *ngIf="cupomForm.get('valorDesconto')?.hasError('required')">
+                        O percentual do desconto é obrigatório.
+                    </mat-error>
+                    <mat-error *ngIf="cupomForm.get('valorDesconto')?.hasError('min') || cupomForm.get('valorDesconto')?.hasError('max')">
+                        O percentual deve estar entre 1 e 100.
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width-input">
+                    <mat-label>ID do Evento</mat-label>
+                    <input matInput formControlName="eventoId" type="number" placeholder="Ex: 1">
+                    <mat-error *ngIf="cupomForm.get('eventoId')?.hasError('required')">
+                        O ID do evento é obrigatório.
+                    </mat-error>
+                    <mat-error *ngIf="cupomForm.get('eventoId')?.hasError('min')">
+                        O ID do evento deve ser um número válido.
+                    </mat-error>
+                </mat-form-field>
+                
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="cupomForm.invalid || loading">
+                        {{ loading ? 'Salvando...' : 'Salvar Cupom' }}
+                    </button>
+                    <button mat-button type="button" (click)="voltar()">
+                        Cancelar
+                    </button>
+                </mat-card-actions>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
