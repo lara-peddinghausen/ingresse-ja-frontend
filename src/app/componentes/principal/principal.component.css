@@ -6,6 +6,8 @@ html, body {
   
   mat-toolbar {
     position: fixed;
+    background-color:#7f91f4 ;
+    color: blue;
     top: 0;
     width: 100%;
     z-index: 10; /* Garante que o navbar fique acima de outros elementos */

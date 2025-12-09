@@ -1,0 +1,112 @@
+/* ----------------------------- */
+/*  FUNDO COM IMAGEM + GRADIENTE */
+/* ----------------------------- */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/bg-show.jpg'); /* coloque sua imagem aqui */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay roxo/azul */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ----------------------------- */
+/*          CARD LOGIN           */
+/* ----------------------------- */
+.card {
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Título */
+.card-title {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* ----------------------------- */
+/*           LABELS              */
+/* ----------------------------- */
+.form-label {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+/*       INPUTS ESTILIZADOS      */
+/* ----------------------------- */
+.form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  border-color: #c38bff;
+  box-shadow: 0 0 0 0.25rem rgba(140, 82, 255, 0.35);
+}
+
+/* Erros */
+small {
+  color: #000001;
+}
+
+/* ----------------------------- */
+/*            BOTÕES            */
+/* ----------------------------- */
+.btn-primary {
+  background: linear-gradient(90deg, #8a2be2, #7a00ff);
+  border: none;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Botão cadastrar */
+a.btn-primary {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: white;
+}
+
+a.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Ajusta z-index de tudo dentro */
+.card-body {
+  position: relative;
+  z-index: 3;
+}
+
