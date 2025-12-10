@@ -56,7 +56,7 @@ export class UsuarioComponent {
         this.abrirDialogo('Informação', 'Cadastro realizado com sucesso!');
         this.router.navigateByUrl('/', { replaceUrl: true });
       } else {
-        this.abrirDialogo('Erro', `ERROR: ${this.erro.erro}`); // incluído - //No projeto não temos status(this.erro.status tem que apagar) (this.erro.error.error tem que trocara error para erro, fica this.erro.erro). Re
+        this.abrirDialogo('Erro', `ERROR: ${this.erro.erro}`); 
       }
     } else {
       console.log('Formulário inválido');

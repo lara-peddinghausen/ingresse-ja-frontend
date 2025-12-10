@@ -47,7 +47,7 @@ export class EventoComponent {
         this.abrirDialogo('Informação', 'Evento cadastrado com sucesso!');
         this.router.navigateByUrl('/home', { replaceUrl: true });
       } else {
-        this.abrirDialogo('Erro', `ERROR: ${this.erro.erro}`); // incluído - //No projeto não temos status(this.erro.status tem que apagar) (this.erro.error.error tem que trocara error para erro, fica this.erro.erro). Re
+        this.abrirDialogo('Erro', `ERROR: ${this.erro.erro}`); // incluído
       }
     } else {
       console.log('Formulário inválido');

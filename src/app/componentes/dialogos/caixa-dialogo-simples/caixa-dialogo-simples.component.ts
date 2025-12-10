@@ -10,4 +10,4 @@ import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 export class CaixaDialogoSimplesComponent {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any) {}
-} //aproveitar para PI3
+} 

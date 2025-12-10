@@ -57,7 +57,7 @@ export class LoginComponent {
         this.router.navigateByUrl('/home', { replaceUrl: true });
       } else {
         // this.abrirDialogo('Erro', 'Informações incorretas'); // alterado
-        this.abrirDialogo('Erro', `ERROR: ${this.erro.erro}`); // incluído - //No projeto não temos status(this.erro.status tem que apagar) (this.erro.error.error tem que trocara error para erro, fica this.erro.erro). Re
+        this.abrirDialogo('Erro', 'Dados incorretos'); // incluído 
       }
     } else {
       console.log('Formulário inválido');

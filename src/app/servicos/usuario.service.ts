@@ -33,14 +33,13 @@ export class UsuarioService {
       responseType: 'text' as 'json'  // Adicionado para tratar a resposta como texto
     };
 
-    const observable: Observable<any> = this.http.post<any>(urlLogin, body, options); //se não usar options, tira ele daqui também(API login)
-    // se fosse get
-    //const observable: Observable<any> = this.http.get<any>(this.apiUrl, { params });
+    const observable: Observable<any> = this.http.post<any>(urlLogin, body, options);
+    
     try {
       // Usando lastValueFrom para pegar a última emissão da resposta
       const resposta = await lastValueFrom(observable);
       console.log("Resposta da api:", resposta);
-      localStorage.setItem('token', resposta); //precisaremos disso para usar o token do projeto
+      localStorage.setItem('token', resposta); 
       return resposta;  // Retorna a resposta da API
     } catch (erro) {
       console.log('Erro da api:', erro);
